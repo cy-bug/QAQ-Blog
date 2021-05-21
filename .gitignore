@@ -15,5 +15,5 @@
 # vendor/
 
 # Some extra files or some folders
-./config/config.yaml
+config/config.yaml
 ./.idea/*
