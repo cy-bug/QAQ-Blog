@@ -13,3 +13,7 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+
+# Some extra files or some folders
+./config/config.yaml
+./.idea/*
