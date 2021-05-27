@@ -1,0 +1,21 @@
+database:
+  mysql:
+    host: "" # 数据库地址
+    port: "3306" # 数据库端口
+    user: "root" # 数据库用户名
+    pass: "" # 数据库密码
+    name: "QAQBlog" # 数据库名字
+
+website:
+  username: "" # 博主的用户名
+  aboutInfo: "" # 博主的关于信息
+  mail: "" # 博主的电子邮箱
+  qq: "" # 博主的 QQ
+  port: "" # 博客的运行端口
+  links: # 友链
+    -
+      link: ""
+      name: ""
+    -
+      link: ""
+      name: ""

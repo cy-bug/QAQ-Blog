@@ -1,0 +1,57 @@
+<!--
+    大部分网页的主体框架
+-->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    {{ template "header.html" . }}
+</head>
+
+
+<body style="background-color: #FAFAFA">
+<!--头部导航栏-->
+{{ template "navigator.html" . }}
+
+<div class="layui-container" style="text-align: center">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md6">
+            <div class="layui-panel">
+                <div style="padding: 30px;">一个面板</div>
+            </div>
+        </div>
+        <div class="layui-col-md6">
+            <div class="layui-panel">
+                <div style="padding: 30px;">一个面板</div>
+            </div>
+        </div>
+    </div>
+
+    <!--底部分页功能-->
+    <div class="layui-row layui-anim layui-anim-fadein">
+        <div class="layui-col-xs12">
+            <div id="pager"></div>
+        </div>
+    </div>
+</div>
+</body>
+
+
+<!--最后再加载脚本优化性能-->
+<script src="/static/lib/layui/layui.js"></script>
+<script>
+    let laypage = layui.laypage;
+    laypage.render({
+        elem: "pager",
+        count: 30,
+        curr: "{{ .page }}",
+        jump: function (obj, first) {
+            if (!first) {
+                // 跳转部分的函数
+                let currentPage = obj.curr
+                let hrefPrefix = "/website/index/"
+                window.location.href = hrefPrefix + currentPage
+            }
+        },
+    })
+</script>
+</html>

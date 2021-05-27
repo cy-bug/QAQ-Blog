@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    {{ template "header.html" . }}
+</head>
+<body style="background-color: #FAFAFA">
+{{ template "navigator.html" .}}
+<div class="layui-container">
+    <div class="layui-card layui-anim layui-anim-fadein" style="margin-left: 20%; margin-top: 10%; margin-right: 20%;
+    box-shadow: 0 0 12px 2px #dddddd; padding: 10px">
+        <div class="layui-card-header" style="font-size: x-large">
+            关于咱
+        </div>
+        <div class="layui-card-body" style="">
+            {{ .aboutinfo }}
+        </div>
+    </div>
+
+    {{ if .mail }}
+    <div class="layui-card layui-anim layui-anim-fadein" style="margin-left: 20%; margin-top: 5%; margin-right: 20%;
+    box-shadow: 0 0 12px 2px #dddddd; padding: 10px">
+        <div class="layui-card-body" style="">
+            电子邮箱: {{ .mail }}
+        </div>
+    </div>
+    {{ end }}
+
+    {{ if .qq }}
+    <div class="layui-card layui-anim layui-anim-fadein" style="margin-left: 20%; margin-top: 5%; margin-right: 20%;
+    box-shadow: 0 0 12px 2px #dddddd; padding: 10px">
+        <div class="layui-card-body" style="">
+            QQ: {{ .qq }}
+        </div>
+    </div>
+    {{ end }}
+</div>
+
+</body>
+</html>
