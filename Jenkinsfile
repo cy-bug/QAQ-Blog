@@ -13,11 +13,7 @@ pipeline {
 	    git branch: 'main', url: 'https://gitee.com/dy5/QAQ-Blog.git'
 	  }
 	}
-	stage('Build') {  // 编译、打包项目
-	  steps { // 如果Dockerfile文件有mvn构建步骤，此步可有可不有，若有后续可以直接将jar包复制进镜像直接运行
-	    // sh 'go build -o main .'  
-	  }
-	}
+
 	stage('docker build') {   // 根据Dockerfile构建镜像,将构建好的jar包放入容器
 	  steps {
 	    script {
