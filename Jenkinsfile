@@ -3,6 +3,10 @@ pipeline {
   tools {
         go 'go' 
     }
+  environment {
+    GOPROXY = 'https://goproxy.cn'
+    PATH = "${env.PATH}:/usr/local/go/bin"
+  }
   stages {
     stage('Checkout') { // git拉取代码
 	  steps {
