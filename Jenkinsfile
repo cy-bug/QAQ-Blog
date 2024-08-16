@@ -1,5 +1,8 @@
 pipeline {
   agent {label '10-node'}
+  tools {
+        go 'go' 
+    }
   stages {
     stage('Checkout') { // git拉取代码
 	  steps {
