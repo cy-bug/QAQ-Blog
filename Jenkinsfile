@@ -32,7 +32,7 @@ pipeline {
 	  steps {
 	    script {
           // 使用 Docker 容器运行构建好的镜像
-          sh "docker run -d --name go-project-blog -p 8070:8888 ops-cy-245:9998/library/go-project:${env.BUILD_ID}"
+          sh "docker run -d --name go-project-blog -p 8070:8090 ops-cy-245:9998/library/go-project:${env.BUILD_ID}"
         }
 	  }
 	}
